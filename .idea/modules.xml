@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/webdev.iml" filepath="$PROJECT_DIR$/.idea/webdev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webdev-angular/webdev-angular.iml" filepath="$PROJECT_DIR$/webdev-angular/webdev-angular.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webdev-servidor/webdev-servidor.iml" filepath="$PROJECT_DIR$/webdev-servidor/webdev-servidor.iml" />
+    </modules>
+  </component>
+</project>
