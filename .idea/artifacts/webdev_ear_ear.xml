@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="ear" name="webdev-ear:ear">
-    <output-path>$PROJECT_DIR$/webdev-ear/target</output-path>
-    <root id="archive" name="ear.ear">
-      <element id="artifact" artifact-name="webdev-ear:ear exploded" />
-    </root>
-  </artifact>
-</component>
