@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: la.projeto:angular:war:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/la/projeto/angular/1.0-SNAPSHOT/angular-1.0-SNAPSHOT.war!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/la/projeto/angular/1.0-SNAPSHOT/angular-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/la/projeto/angular/1.0-SNAPSHOT/angular-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

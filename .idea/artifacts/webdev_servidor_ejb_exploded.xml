@@ -1,0 +1,12 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ejb" name="webdev-servidor:ejb exploded">
+    <output-path>$PROJECT_DIR$/webdev-servidor/target/servidor</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="webdev-servidor/ejb/EJB" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/webdev-servidor/target/servidor/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="webdev-servidor" />
+    </root>
+  </artifact>
+</component>
