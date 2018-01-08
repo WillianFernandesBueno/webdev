@@ -4,7 +4,11 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/webdev.iml" filepath="$PROJECT_DIR$/.idea/webdev.iml" />
       <module fileurl="file://$PROJECT_DIR$/webdev-angular/webdev-angular.iml" filepath="$PROJECT_DIR$/webdev-angular/webdev-angular.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webdev-dto/webdev-dto.iml" filepath="$PROJECT_DIR$/webdev-dto/webdev-dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webdev-ear/webdev-ear.iml" filepath="$PROJECT_DIR$/webdev-ear/webdev-ear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webdev-interface-servico/webdev-interface-servico.iml" filepath="$PROJECT_DIR$/webdev-interface-servico/webdev-interface-servico.iml" />
       <module fileurl="file://$PROJECT_DIR$/webdev-servidor/webdev-servidor.iml" filepath="$PROJECT_DIR$/webdev-servidor/webdev-servidor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webdev-web/webdev-web.iml" filepath="$PROJECT_DIR$/webdev-web/webdev-web.iml" />
     </modules>
   </component>
 </project>
