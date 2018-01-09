@@ -1,0 +1,10 @@
+*.idea
+*.iml
+*.txt
+webdev-angular/target
+webdev-dto/target
+webdev-eae/target
+webdev-interface-servico/target
+webdev-servidor/target
+webdev-web/target
+webdev-ear/target/
