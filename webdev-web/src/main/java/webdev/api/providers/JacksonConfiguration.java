@@ -14,6 +14,10 @@ import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;
 import java.math.BigDecimal;
 
+/**
+ * Configuração Jackson
+ * @author Willian Bueno
+ */
 @Provider
 @Produces(MediaType.APPLICATION_JSON)
 public class JacksonConfiguration implements ContextResolver<ObjectMapper> {
