@@ -1,1 +1,7 @@
-.gitignore
+.idea
+webdev-angular/target
+webdev-dto
+webdev-eae/target
+webdev-interface-servico/target
+webdev-servidor/target
+webdev-web/target
