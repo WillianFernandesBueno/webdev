@@ -1,247 +1,292 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>br.com.webdev</groupId>
-    <artifactId>webdev</artifactId>
-    <version>1.0-SNAPSHOT</version>
+	<groupId>br.com.webdev</groupId>
+	<artifactId>webdev</artifactId>
+	<version>1.0-SNAPSHOT</version>
 
-    <packaging>pom</packaging>
+	<packaging>pom</packaging>
 
-    <name>webdev</name>
+	<name>webdev</name>
 
-    <!-- Módulos da aplicação -->
-    <modules>
-        <module>webdev-angular</module>
-        <module>webdev-dto</module>
-        <module>webdev-ear</module>
-        <module>webdev-interface-servico</module>
-        <module>webdev-web</module>
-        <module>webdev-servidor</module>
-    </modules>
+	<!-- Módulos da aplicação -->
+	<modules>
+		<module>webdev-angular</module>
+		<module>webdev-mobile</module>
+		<module>webdev-dto</module>
+		<module>webdev-ear</module>
+		<module>webdev-interface-servico</module>
+		<module>webdev-web</module>
+		<module>webdev-servidor</module>
+	</modules>
 
-    <properties>
-        <jackson.jaxrs.json>2.8.4</jackson.jaxrs.json>
-        <swagger.version>1.5.13</swagger.version>
-        <swagger-maven-plugin.version>3.1.4</swagger-maven-plugin.version>
-        <xstream.version>1.4.10</xstream.version>
-        <commons-lang3.version>3.6</commons-lang3.version>
-    </properties>
+	<properties>
+		<jackson.jaxrs.json>2.8.4</jackson.jaxrs.json>
+		<swagger.version>1.5.13</swagger.version>
+		<swagger-maven-plugin.version>3.1.4</swagger-maven-plugin.version>
+		<xstream.version>1.4.10</xstream.version>
+		<commons-lang3.version>3.6</commons-lang3.version>
+	</properties>
 
-    <url>http://maven.apache.org</url>
+	<url>http://maven.apache.org</url>
 
-    <dependencyManagement>
-        <dependencies>
-            <!-- Java EE -->
-            <dependency>
-                <groupId>javax</groupId>
-                <artifactId>javaee-api</artifactId>
-                <version>7.0</version>
-                <scope>provided</scope>
-            </dependency>
-            <!-- Java EE -->
+	<dependencyManagement>
+		<dependencies>
+			<!-- PROJETO WEBDEV -->
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>angular</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>mobile</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>dto</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- <dependency> -->
+			<!-- <groupId>${project.groupId}</groupId> -->
+			<!-- <artifactId>ear</artifactId> -->
+			<!-- <version>${project.version}</version> -->
+			<!-- </dependency> -->
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>interface-servico</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>web</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>servidor</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<!-- PROJETO WEBDEV -->
 
-            <!-- Bean Validations -->
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-validator</artifactId>
-                <version>5.2.4.Final</version>
-                <scope>provided</scope>
-            </dependency>
-            <!-- Bean Validations -->
 
-            <!-- WebServices -->
-            <dependency>
-                <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                <artifactId>jackson-jaxrs-json-provider</artifactId>
-                <version>${jackson.jaxrs.json}</version>
-            </dependency>
+			<!-- Java EE -->
+			<dependency>
+				<groupId>javax</groupId>
+				<artifactId>javaee-api</artifactId>
+				<version>7.0</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- Java EE -->
 
-            <dependency>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-annotations</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-core</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
+			<dependency>
+				<groupId>javax.ws.rs</groupId>
+				<artifactId>javax.ws.rs-api</artifactId>
+				<version>2.1</version>
+			</dependency>
 
-            <dependency>
-                <groupId>com.github.kongchen</groupId>
-                <artifactId>swagger-maven-plugin</artifactId>
-                <version>${swagger-maven-plugin.version}</version>
-            </dependency>
-            <!-- WebServices -->
+			<!-- Bean Validations -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>5.2.4.Final</version>
+				<scope>provided</scope>
+			</dependency>
+			<!-- Bean Validations -->
 
-            <!-- Diversos -->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.16.16</version>
-            </dependency>
+			<!-- WebServices -->
+			<dependency>
+				<groupId>com.fasterxml.jackson.jaxrs</groupId>
+				<artifactId>jackson-jaxrs-json-provider</artifactId>
+				<version>${jackson.jaxrs.json}</version>
+			</dependency>
 
-            <dependency>
-                <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>2.8</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
+			<dependency>
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-annotations</artifactId>
+				<version>${swagger.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-core</artifactId>
+				<version>${swagger.version}</version>
+			</dependency>
 
-            <dependency>
-                <groupId>com.auth0</groupId>
-                <artifactId>java-jwt</artifactId>
-                <version>3.2.0</version>
-            </dependency>
+			<dependency>
+				<groupId>com.github.kongchen</groupId>
+				<artifactId>swagger-maven-plugin</artifactId>
+				<version>${swagger-maven-plugin.version}</version>
+			</dependency>
+			<!-- WebServices -->
 
-            <dependency>
-                <groupId>com.thoughtworks.xstream</groupId>
-                <artifactId>xstream</artifactId>
-                <version>${xstream.version}</version>
-            </dependency>
-            <!-- Diversos -->
+			<!-- Diversos -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.16.16</version>
+			</dependency>
 
-            <!-- Testes Unitários -->
-            <dependency>
-                <groupId>org.javassist</groupId>
-                <artifactId>javassist</artifactId>
-                <version>3.20.0-GA</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.hibernate</groupId>
-                <artifactId>hibernate-core</artifactId>
-                <version>5.2.9.Final</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-all</artifactId>
-                <version>1.10.7</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.jersey.core</groupId>
-                <artifactId>jersey-server</artifactId>
-                <version>2.25.1</version>
-                <scope>test</scope>
-            </dependency>
-            <!-- Testes Unitários -->
-        </dependencies>
-    </dependencyManagement>
-    <build>
-        <finalName>${project.artifactId}</finalName>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>2.8</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.6.201602180812</version>
-            </plugin>
-        </plugins>
+			<dependency>
+				<groupId>com.auth0</groupId>
+				<artifactId>java-jwt</artifactId>
+				<version>3.2.0</version>
+			</dependency>
 
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-ejb-plugin</artifactId>
-                    <version>2.3</version>
-                </plugin>
-                <plugin>
-                    <groupId>com.github.kongchen</groupId>
-                    <artifactId>swagger-maven-plugin</artifactId>
-                    <version>${swagger-maven-plugin.version}</version>
-                    <dependencies>
-                        <dependency>
-                            <groupId>org.reflections</groupId>
-                            <artifactId>reflections</artifactId>
-                            <version>0.9.9</version>
-                        </dependency>
+			<dependency>
+				<groupId>com.thoughtworks.xstream</groupId>
+				<artifactId>xstream</artifactId>
+				<version>${xstream.version}</version>
+			</dependency>
+			<!-- Diversos -->
 
-                        <dependency>
-                            <groupId>io.swagger</groupId>
-                            <artifactId>swagger-core</artifactId>
-                            <version>1.5.13</version>
-                        </dependency>
+			<!-- Testes Unitários -->
+			<dependency>
+				<groupId>org.javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.20.0-GA</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>5.2.9.Final</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>1.10.7</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.glassfish.jersey.core</groupId>
+				<artifactId>jersey-server</artifactId>
+				<version>2.25.1</version>
+				<scope>test</scope>
+			</dependency>
+			<!-- Testes Unitários -->
+		</dependencies>
+	</dependencyManagement>
+	<build>
+		<finalName>${project.artifactId}</finalName>
 
-                        <dependency>
-                            <groupId>io.swagger</groupId>
-                            <artifactId>swagger-hibernate-validations</artifactId>
-                            <version>1.5.13</version>
-                        </dependency>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.6.201602180812</version>
+			</plugin>
+		</plugins>
 
-                        <dependency>
-                            <groupId>org.apache.commons</groupId>
-                            <artifactId>commons-lang3</artifactId>
-                            <version>${commons-lang3.version}</version>
-                        </dependency>
-                    </dependencies>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-war-plugin</artifactId>
-                    <version>2.3</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>jaxws-maven-plugin</artifactId>
-                    <version>1.12</version>
-                </plugin>
-                <plugin>
-                    <groupId>io.swagger</groupId>
-                    <artifactId>swagger-codegen-maven-plugin</artifactId>
-                    <version>2.2.2</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>exec-maven-plugin</artifactId>
-                    <version>1.4.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <version>2.3</version>
-                </plugin>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-ejb-plugin</artifactId>
+					<version>2.3</version>
+				</plugin>
+				<plugin>
+					<groupId>com.github.kongchen</groupId>
+					<artifactId>swagger-maven-plugin</artifactId>
+					<version>${swagger-maven-plugin.version}</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.reflections</groupId>
+							<artifactId>reflections</artifactId>
+							<version>0.9.9</version>
+						</dependency>
 
-                <plugin>
-                    <groupId>org.eclipse.m2e</groupId>
-                    <artifactId>lifecycle-mapping</artifactId>
-                    <version>1.0.0</version>
-                    <configuration>
-                        <lifecycleMappingMetadata>
-                            <pluginExecutions>
-                                <pluginExecution>
-                                    <pluginExecutionFilter>
-                                        <groupId> com.github.kongchen</groupId>
-                                        <artifactId>swagger-maven-plugin</artifactId>
-                                        <versionRange>[3.1.4,)</versionRange>
-                                        <goals>
-                                            <goal>generate</goal>
-                                        </goals>
-                                    </pluginExecutionFilter>
-                                    <action>
-                                        <ignore></ignore>
-                                    </action>
-                                </pluginExecution>
-                            </pluginExecutions>
-                        </lifecycleMappingMetadata>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+						<dependency>
+							<groupId>io.swagger</groupId>
+							<artifactId>swagger-core</artifactId>
+							<version>1.5.13</version>
+						</dependency>
+
+						<dependency>
+							<groupId>io.swagger</groupId>
+							<artifactId>swagger-hibernate-validations</artifactId>
+							<version>1.5.13</version>
+						</dependency>
+
+						<dependency>
+							<groupId>org.apache.commons</groupId>
+							<artifactId>commons-lang3</artifactId>
+							<version>${commons-lang3.version}</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>2.3</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>jaxws-maven-plugin</artifactId>
+					<version>1.12</version>
+				</plugin>
+				<plugin>
+					<groupId>io.swagger</groupId>
+					<artifactId>swagger-codegen-maven-plugin</artifactId>
+					<version>2.2.2</version>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.4.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-assembly-plugin</artifactId>
+					<version>2.3</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId> com.github.kongchen</groupId>
+										<artifactId>swagger-maven-plugin</artifactId>
+										<versionRange>[3.1.4,)</versionRange>
+										<goals>
+											<goal>generate</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 
 </project>

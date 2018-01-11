@@ -1,7 +1,11 @@
 *.idea
 *.iml
 *.txt
+*.classpath
+*.project
+*.settings
 webdev-angular/target
+webdev-mobile/target
 webdev-dto/target
 webdev-eae/target
 webdev-interface-servico/target
