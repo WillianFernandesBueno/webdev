@@ -70,11 +70,6 @@
                             <artifactId>web</artifactId>
                             <contextRoot>/webdev</contextRoot>
                         </webModule>
-                        <webModule>
-                            <groupId>${project.groupId}</groupId>
-                            <artifactId>web</artifactId>
-                            <contextRoot>/angular/webdev</contextRoot>
-                        </webModule>
                     </modules>
                 </configuration>
             </plugin>

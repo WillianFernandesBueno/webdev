@@ -1,3 +1,4 @@
+import {ComunicaBackendProvider} from '../../providers/comunica-servidor-provider';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { HomePage } from './home';
