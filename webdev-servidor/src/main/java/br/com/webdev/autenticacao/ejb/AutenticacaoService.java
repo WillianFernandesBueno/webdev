@@ -1,7 +1,8 @@
 
-package br.com.webdev.autenticacao;
+package br.com.webdev.autenticacao.ejb;
 
 import javax.ejb.Stateless;
+import br.com.webdev.autenticacao.IAutenticacao;
 
 @Stateless
 public class AutenticacaoService implements IAutenticacao
